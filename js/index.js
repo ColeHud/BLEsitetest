@@ -35,9 +35,9 @@ var app = {
     onConnect: function(device) {
         app.log("Connected to " + deviceName + " (" + deviceId + ")!");
         // uncomment to read characteristic on connect; if read is good, goto: onRead
-        summon.bluetooth.read(deviceId, serviceUuid, characteristicUuid, app.onRead, app.onError);  
+        //summon.bluetooth.read(deviceId, serviceUuid, characteristicUuid, app.onRead, app.onError);  
         // uncomment to write writeValue to characteristic on connect; if write is good, goto: onWrite
-        // summon.bluetooth.write(deviceId, serviceUuid, characteristicUuid, app.stringToBytes(writeValue), app.onWrite, app.onError); 
+        summon.bluetooth.write(deviceId, serviceUuid, characteristicUuid, app.stringToBytes(writeValue), app.onWrite, app.onError); 
     },
     // BLE Characteristic Read Callback
     onRead: function(data) {
