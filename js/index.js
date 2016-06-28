@@ -6,6 +6,7 @@ var serviceUuid = "E528A44AFF4F3089D44F7CB505ABA641";                           
 var characteristicUuid = "A410";                                                    // example characteristic UUID to read or write
 var writeValue = "Written from this app";                                           // value to write to characteristic
 
+<<<<<<< HEAD
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
     console.log(navigator.notification);
@@ -24,6 +25,9 @@ navigator.notification.alert(
 function alertDismissed() {
     // do something
 }
+=======
+alert("Stuff!");
+>>>>>>> 167b4d4a2ca4753ad12fed8decc80ade85544f89
 
 var app = {
     // Application Constructor
