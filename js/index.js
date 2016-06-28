@@ -1,6 +1,6 @@
 /* JavaScript for Template Summon UI */
 
-var deviceId = "C0:98:E5:30:03:14";                                                 // while testing, replace with address of a BLE peripheral
+var deviceId = "C0:98:E5:00:F8:02";                                                 // while testing, replace with address of a BLE peripheral
 var deviceName = "BLE Device";                                                      // while testing, replace with desired name
 var serviceUuid = "1800";                                                           // example service UUID to access
 var characteristicUuid = "2A00";                                                    // example characteristic UUID to read or write
