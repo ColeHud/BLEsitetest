@@ -39,7 +39,7 @@ var app = {
         // uncomment to write writeValue to characteristic on connect; if write is good, goto: onWrite
         $( "#addcharacteristicsbutton" ).bind( "click", function(event, ui) {
             writeValue = $("#textinput").val();
-            
+            alert("Writevalue: " + writeValue); 
             summon.bluetooth.write(deviceId, serviceUuid, characteristicUuid, app.stringToBytes(writeValue), app.onWrite, app.onError); 
         }); 
     },
