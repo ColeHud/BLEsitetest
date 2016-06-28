@@ -6,6 +6,25 @@ var serviceUuid = "E528A44AFF4F3089D44F7CB505ABA641";                           
 var characteristicUuid = "A410";                                                    // example characteristic UUID to read or write
 var writeValue = "Written from this app";                                           // value to write to characteristic
 
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    console.log(navigator.notification);
+}
+
+navigator.notification.alert(
+    'You are the winner!',  // message
+        alertDismissed,         // callback
+	    'Game Over',            // title
+	        'Done'                  // buttonName
+		);
+
+
+
+
+function alertDismissed() {
+    // do something
+}
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -39,7 +58,16 @@ var app = {
         // uncomment to write writeValue to characteristic on connect; if write is good, goto: onWrite
         $( "#addcharacteristicsbutton" ).bind( "click", function(event, ui) {
             writeValue = $("#textinput").val();
-            alert("Writevalue: " + writeValue); 
+            
+	    navigator.notification.alert(
+	        'You are the winner!',  // message
+		    alertDismissed,         // callback
+		        'Game Over',            // title
+			    'Done'                  // buttonName
+			    );
+
+
+
             summon.bluetooth.write(deviceId, serviceUuid, characteristicUuid, app.stringToBytes(writeValue), app.onWrite, app.onError); 
         }); 
     },
