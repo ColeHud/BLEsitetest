@@ -1,7 +1,7 @@
 /* JavaScript for Template Summon UI */
 
 var deviceId = "C0:98:E5:00:F8:02";                                                 // while testing, replace with address of a BLE peripheral
-var deviceName = "BLE Device";                                                      // while testing, replace with desired name
+var deviceName = "E-Ink disp";                                                      // while testing, replace with desired name
 var serviceUuid = "1800";                                                           // example service UUID to access
 var characteristicUuid = "2A00";                                                    // example characteristic UUID to read or write
 var writeValue = "Written Name";                                                    // value to write to characteristic
