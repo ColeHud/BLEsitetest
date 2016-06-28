@@ -6,6 +6,10 @@ var serviceUuid = "E528A44AFF4F3089D44F7CB505ABA641";                           
 var characteristicUuid = "A410";                                                    // example characteristic UUID to read or write
 var writeValue = "Written from this app";                                           // value to write to characteristic
 
+$( "#addcharacteristicsbutton" ).bind( "click", function(event, ui) {
+    
+});
+
 var app = {
     // Application Constructor
     initialize: function() {
